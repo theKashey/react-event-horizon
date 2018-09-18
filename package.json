@@ -17,7 +17,7 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "ts-react-toolbox": "^0.1.21"
   },
   "engines": {
