@@ -1,4 +1,7 @@
 # event horizon
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/theKashey/react-event-horizon.svg)](https://greenkeeper.io/)
+
 Just before the Black Hole. 
 
 ```js
