@@ -1,6 +1,6 @@
 {
   "name": "react-event-horizon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Just draw a line in the sand, and no update will pass it",
   "main": "dist/es5/index.js",
   "scripts": {
