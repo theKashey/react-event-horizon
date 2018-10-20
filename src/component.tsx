@@ -1,13 +1,29 @@
 import {PureComponent} from 'react';
 
 interface IProps {
-  gen?: any;
-  onUpdate?: () => void
+  children: React.ReactNode,
+  onUpdate?: () => void,
 }
 
-export class EventHorizon extends PureComponent<IProps> {
+interface AnyProp {
+  [key: string]: any;
+}
+
+const pick = (props: IProps & AnyProp) => {
+  const {children, onUpdate, ...rest} = props;
+  return rest;
+};
+
+export class EventHorizon extends PureComponent<IProps & AnyProp> {
   shouldComponentUpdate(nextProps: IProps) {
-    return this.props.gen !== nextProps.gen;
+    const rest = pick(this.props);
+    const oldRest = pick(nextProps);
+    for (let i in rest) {
+      if (rest[i] !== oldRest[i]) {
+        return true;
+      }
+    }
+    return false;
   }
 
   componentDidUpdate() {

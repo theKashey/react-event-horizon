@@ -10,8 +10,12 @@ import {EventHorizon} from 'react-event-horizon';
     will NOT be updated
   </EventHorizon>
   
-  <EventHorizon gen={anything}>
-      will update when gen update
+  <EventHorizon anyProp={anything}>
+      will update when anyProp updates
+  </EventHorizon>
+  
+  <EventHorizon onUpdate={() => alert('updated')} prop={prop}>
+        will update and trigger onUpdate (only) when prop updates
     </EventHorizon>
 </UpdateSource>
 ```
